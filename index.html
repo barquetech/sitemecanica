@@ -7,40 +7,19 @@
   <title>GARAGEM RETRÔ — Carros 1950–1980</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merriweather:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-  <!-- ===== Sprites dos carros (silhuetas por década) ===== -->
-  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
-    <symbol id="car-50" viewBox="0 0 480 220">
-      <path d="M25,138 L25,120 C28,96 55,85 85,82 L150,80 L185,58 L250,52 L330,62 L360,72 L395,90 L415,105 L425,118 L425,138 Z" fill="currentColor"/>
-      <circle cx="135" cy="150" r="44" fill="var(--wheel)"/>
-      <circle cx="365" cy="150" r="44" fill="var(--wheel)"/>
-    </symbol>
-    <symbol id="car-60" viewBox="0 0 480 220">
-      <path d="M20,138 L20,120 C25,98 45,86 80,80 L150,70 L210,56 L275,52 L340,60 L385,74 L410,95 L418,112 L418,138 Z" fill="currentColor"/>
-      <circle cx="135" cy="150" r="44" fill="var(--wheel)"/>
-      <circle cx="370" cy="150" r="44" fill="var(--wheel)"/>
-    </symbol>
-    <symbol id="car-70" viewBox="0 0 480 220">
-      <path d="M18,138 L18,122 C22,104 40,94 70,88 L110,84 L170,74 L240,58 L300,54 L350,60 L390,74 L408,92 L416,108 L416,138 Z" fill="currentColor"/>
-      <circle cx="140" cy="150" r="44" fill="var(--wheel)"/>
-      <circle cx="365" cy="150" r="44" fill="var(--wheel)"/>
-    </symbol>
-    <symbol id="car-80" viewBox="0 0 480 220">
-      <path d="M22,138 L22,122 L55,116 L80,96 L150,80 L280,70 L340,74 L375,84 L395,100 L405,114 L405,138 Z" fill="currentColor"/>
-      <circle cx="140" cy="150" r="44" fill="var(--wheel)"/>
-      <circle cx="365" cy="150" r="44" fill="var(--wheel)"/>
-    </symbol>
-  </svg>
 
   <header class="header" id="topo">
     <div class="container header-inner">
       <a href="#inicio" class="logo">
         <span class="logo-mark">G</span>
-        <span class="logo-text">GARAGEM <em>RETRÔ</em></span>
+        <span class="logo-text">
+          <small>Est. 1987</small>
+          GARAGEM <em>RETRÔ</em>
+        </span>
       </a>
       <nav class="nav" id="nav">
         <a href="#inicio">Início</a>
@@ -58,8 +37,11 @@
 
     <!-- ===== HERO ===== -->
     <section class="hero" id="inicio">
+      <div class="hero-backdrop" aria-hidden="true">
+        <img src="img/mercedes-300sl-1957.jpg" alt="" fetchpriority="high">
+      </div>
       <div class="container hero-content">
-        <span class="hero-badge" data-reveal>DESDE 1987</span>
+        <span class="hero-kicker" data-reveal>Revista de Clássicos — Desde 1987</span>
         <h1 class="hero-title" data-reveal>O PASSADO<br>MERECE UM<br><em>BOM FUTURO</em></h1>
         <p class="hero-sub" data-reveal>Especialistas em carros das décadas de <strong>1950 a 1980</strong>. Restauração completa, mecânica clássica e peças de época com a precisão que cada veículo merece.</p>
         <div class="hero-actions" data-reveal>
@@ -67,16 +49,14 @@
           <a href="#decadas" class="btn btn-outline">Ver as décadas</a>
         </div>
       </div>
-      <div class="hero-car" id="heroCar" aria-hidden="true">
-        <svg class="car-art" viewBox="0 0 480 220"><use href="#car-70"/></svg>
-      </div>
+      <p class="hero-credits">Mercedes-Benz 300SL Roadster, 1957 — via Wikimedia Commons</p>
     </section>
 
     <!-- ===== MARQUEE ===== -->
     <div class="marquee" aria-hidden="true">
       <div class="marquee-track">
-        <span>MECÂNICA CLÁSSICA&nbsp;&nbsp;&#10022;&nbsp;&nbsp;FUNILARIA E PINTURA&nbsp;&nbsp;&#10022;&nbsp;&nbsp;RESTAURAÇÃO TOTAL&nbsp;&nbsp;&#10022;&nbsp;&nbsp;ELÉTRICA DE ÉPOCA&nbsp;&nbsp;&#10022;&nbsp;&nbsp;PEÇAS DE 1950 A 1980&nbsp;&nbsp;&#10022;&nbsp;&nbsp;</span>
-        <span>MECÂNICA CLÁSSICA&nbsp;&nbsp;&#10022;&nbsp;&nbsp;FUNILARIA E PINTURA&nbsp;&nbsp;&#10022;&nbsp;&nbsp;RESTAURAÇÃO TOTAL&nbsp;&nbsp;&#10022;&nbsp;&nbsp;ELÉTRICA DE ÉPOCA&nbsp;&nbsp;&#10022;&nbsp;&nbsp;PEÇAS DE 1950 A 1980&nbsp;&nbsp;&#10022;&nbsp;&nbsp;</span>
+        <span>Mecânica Clássica&nbsp;&nbsp;&#10022;&nbsp;&nbsp;Funilaria e Pintura&nbsp;&nbsp;&#10022;&nbsp;&nbsp;Restauração Total&nbsp;&nbsp;&#10022;&nbsp;&nbsp;Elétrica de Época&nbsp;&nbsp;&#10022;&nbsp;&nbsp;Peças de 1950 a 1980&nbsp;&nbsp;&#10022;&nbsp;&nbsp;</span>
+        <span>Mecânica Clássica&nbsp;&nbsp;&#10022;&nbsp;&nbsp;Funilaria e Pintura&nbsp;&nbsp;&#10022;&nbsp;&nbsp;Restauração Total&nbsp;&nbsp;&#10022;&nbsp;&nbsp;Elétrica de Época&nbsp;&nbsp;&#10022;&nbsp;&nbsp;Peças de 1950 a 1980&nbsp;&nbsp;&#10022;&nbsp;&nbsp;</span>
       </div>
     </div>
 
@@ -86,27 +66,28 @@
         <div class="section-head">
           <span class="section-tag" data-reveal>Nossa história</span>
           <h2 data-reveal>Uma garagem<br>apaixonada por clássicos</h2>
+          <hr class="rule" data-reveal>
           <p data-reveal>Há mais de três décadas cuidamos de ícones das décadas de 50, 60, 70 e 80 com o mesmo cuidado de quem os tirou da linha de montagem.</p>
         </div>
 
         <div class="oficina-grid">
           <article class="press-card" data-reveal>
-            <span class="card-num">01</span>
+            <span class="card-num">I</span>
             <h3>Mecânica Clássica</h3>
             <p>Motores a gasolina, carburados e injetados. Diagnóstico, retífica e regulagem fina.</p>
           </article>
           <article class="press-card" data-reveal>
-            <span class="card-num">02</span>
+            <span class="card-num">II</span>
             <h3>Funilaria e Pintura</h3>
             <p>Remoção de ferrugem, reparo de lataria e pintura nas cores originais de fábrica.</p>
           </article>
           <article class="press-card" data-reveal>
-            <span class="card-num">03</span>
+            <span class="card-num">III</span>
             <h3>Restauração Total</h3>
             <p>Do chassi ao acabamento, com laudo técnico e documentação de todo o processo.</p>
           </article>
           <article class="press-card" data-reveal>
-            <span class="card-num">04</span>
+            <span class="card-num">IV</span>
             <h3>Elétrica de Época</h3>
             <p>Rearme de chicotes, alternadores, dínamos e painéis preservando a aparência original.</p>
           </article>
@@ -117,49 +98,58 @@
     <!-- ===== DÉCADAS ===== -->
     <section class="decadas" id="decadas">
       <div class="container">
-        <div class="section-head section-head-dark">
+        <div class="section-head section-head-dark center">
           <span class="section-tag" data-reveal>Especialização</span>
           <h2 data-reveal>Quatro décadas<br>de clássicos</h2>
+          <hr class="rule" data-reveal>
           <p data-reveal>Cada era tem sua personalidade. A gente entende todas elas.</p>
         </div>
 
         <div class="decadas-grid">
           <article class="era-card" data-reveal>
-            <div class="era-art"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-50"/></svg></div>
-            <div class="era-body">
+            <div class="era-art">
+              <img src="img/chevrolet-belair-1957.jpg" alt="Chevrolet Bel Air 1957">
               <span class="era-year">ANOS 50</span>
+            </div>
+            <div class="era-body">
               <h3>Cromados e cauda alta</h3>
-              <p>Monobloco, embreagens originais, bateria de 6V e as peças raras que ninguém mais tem.</p>
+              <p>Chevrolet Bel Air, Mercedes 300SL. Monobloco, embreagens originais e as peças raras que ninguém mais tem.</p>
               <a href="#contato" class="btn btn-small">Orçamento</a>
             </div>
           </article>
 
           <article class="era-card" data-reveal>
-            <div class="era-art"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-60"/></svg></div>
-            <div class="era-body">
+            <div class="era-art">
+              <img src="img/ford-mustang-1966.jpg" alt="Ford Mustang 1966">
               <span class="era-year">ANOS 60</span>
+            </div>
+            <div class="era-body">
               <h3>Muscle e Europa</h3>
-              <p>V8, carburadores múltiplos e freios a tambor restaurados à especificação de fábrica.</p>
+              <p>Ford Mustang, Pontiac GTO, Lotus Elan. V8, carburadores múltiplos e freios a tambor restaurados à especificação de fábrica.</p>
               <a href="#contato" class="btn btn-small">Orçamento</a>
             </div>
           </article>
 
           <article class="era-card" data-reveal>
-            <div class="era-art"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-70"/></svg></div>
-            <div class="era-body">
+            <div class="era-art">
+              <img src="img/bmw-2002-1970.jpg" alt="BMW 2002 Turbo">
               <span class="era-year">ANOS 70</span>
+            </div>
+            <div class="era-body">
               <h3>Ícones de garagem</h3>
-              <p>Injeção mecânica, ar-condicionado de época e restauração estética completa.</p>
+              <p>BMW 2002, Lotus Esprit. Injeção mecânica, ar-condicionado de época e restauração estética completa.</p>
               <a href="#contato" class="btn btn-small">Orçamento</a>
             </div>
           </article>
 
           <article class="era-card" data-reveal>
-            <div class="era-art"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-80"/></svg></div>
-            <div class="era-body">
+            <div class="era-art">
+              <img src="img/bmw-e30-1985.jpg" alt="BMW E30 1985">
               <span class="era-year">ANOS 80</span>
+            </div>
+            <div class="era-body">
               <h3>Linhas retas</h3>
-              <p>Eletrônica básica, turbo original, adesivos e acabamentos característicos da década.</p>
+              <p>BMW E30, Mercedes W123. Eletrônica básica, turbo original e acabamentos característicos da década.</p>
               <a href="#contato" class="btn btn-small">Orçamento</a>
             </div>
           </article>
@@ -173,33 +163,34 @@
         <div class="section-head">
           <span class="section-tag" data-reveal>Portfólio</span>
           <h2 data-reveal>Projetos que<br>saíram da oficina</h2>
+          <hr class="rule" data-reveal>
           <p data-reveal>Alguns clássicos que passaram pelas nossas mãos.</p>
         </div>
 
         <div class="galeria-grid">
           <figure class="gallery-item" data-reveal>
-            <div class="gallery-art art-yellow"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-50"/></svg></div>
-            <figcaption><span class="gallery-tag">1955</span> Sedã rabicho</figcaption>
+            <div class="gallery-art"><img src="img/chevrolet-impala-1965.jpg" alt="Chevrolet Impala 1965"></div>
+            <figcaption><span class="gallery-tag">Chevrolet</span> Impala, 1965</figcaption>
           </figure>
           <figure class="gallery-item" data-reveal>
-            <div class="gallery-art"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-50"/></svg></div>
-            <figcaption><span class="gallery-tag">1958</span> Restauração total</figcaption>
+            <div class="gallery-art"><img src="img/pontiac-gto-1967.jpg" alt="Pontiac GTO 1967"></div>
+            <figcaption><span class="gallery-tag">Pontiac</span> GTO, 1967</figcaption>
           </figure>
           <figure class="gallery-item" data-reveal>
-            <div class="gallery-art art-yellow"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-60"/></svg></div>
-            <figcaption><span class="gallery-tag">1963</span> Cupê fastback</figcaption>
+            <div class="gallery-art"><img src="img/ford-galaxie-1965.jpg" alt="Ford Galaxie 500 1965"></div>
+            <figcaption><span class="gallery-tag">Ford</span> Galaxie 500, 1965</figcaption>
           </figure>
           <figure class="gallery-item" data-reveal>
-            <div class="gallery-art"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-60"/></svg></div>
-            <figcaption><span class="gallery-tag">1967</span> Pintura original</figcaption>
+            <div class="gallery-art"><img src="img/lotus-elan-1967.jpg" alt="Lotus Elan S3 1967"></div>
+            <figcaption><span class="gallery-tag">Lotus</span> Elan S3, 1967</figcaption>
           </figure>
           <figure class="gallery-item" data-reveal>
-            <div class="gallery-art art-yellow"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-70"/></svg></div>
-            <figcaption><span class="gallery-tag">1972</span> Chassi refeito</figcaption>
+            <div class="gallery-art"><img src="img/lotus-esprit-1977.jpg" alt="Lotus Esprit S1 1977"></div>
+            <figcaption><span class="gallery-tag">Lotus</span> Esprit S1, 1977</figcaption>
           </figure>
           <figure class="gallery-item" data-reveal>
-            <div class="gallery-art"><svg class="car-art" viewBox="0 0 480 220"><use href="#car-80"/></svg></div>
-            <figcaption><span class="gallery-tag">1983</span> Hatch angular</figcaption>
+            <div class="gallery-art"><img src="img/mercedes-w123-1980.jpg" alt="Mercedes-Benz W123 1980"></div>
+            <figcaption><span class="gallery-tag">Mercedes</span> W123, 1980</figcaption>
           </figure>
         </div>
       </div>
@@ -208,23 +199,24 @@
     <!-- ===== DEPOIMENTOS ===== -->
     <section class="depoimentos" id="depoimentos">
       <div class="container">
-        <div class="section-head">
+        <div class="section-head center">
           <span class="section-tag" data-reveal>Depoimentos</span>
           <h2 data-reveal>Quem confia,<br>recomenda</h2>
+          <hr class="rule" data-reveal>
         </div>
 
         <div class="depoimentos-slider" id="depoSlider">
           <article class="depoimento" data-index="0">
             <p class="depoimento-texto">&ldquo;Restauraram o Fusca 1973 do meu pai do zero. Cada parafuso original, cada detalhe respeitado. Um trabalho de joalheria.&rdquo;</p>
-            <p class="depoimento-autor">CARLOS MENEZES</p>
+            <p class="depoimento-autor">Carlos Menezes</p>
           </article>
           <article class="depoimento" data-index="1">
             <p class="depoimento-texto">&ldquo;Meu Opala 1978 voltou a rodar melhor do que quando saiu da concessionária. Equipe apaixonada e honesta.&rdquo;</p>
-            <p class="depoimento-autor">FERNANDA LIMA</p>
+            <p class="depoimento-autor">Fernanda Lima</p>
           </article>
           <article class="depoimento" data-index="2">
             <p class="depoimento-texto">&ldquo;Levaram dois anos para a restauração do meu Galaxie 500, mas o resultado superou todas as expectativas.&rdquo;</p>
-            <p class="depoimento-autor">ROBERTO SALLES</p>
+            <p class="depoimento-autor">Roberto Salles</p>
           </article>
         </div>
         <div class="depoimentos-nav" id="depoNav">
@@ -241,6 +233,7 @@
         <div class="contato-info">
           <span class="section-tag" data-reveal>Fale conosco</span>
           <h2 data-reveal>Venha visitar<br>a garagem</h2>
+          <hr class="rule" data-reveal>
           <p data-reveal>Agende uma avaliação gratuita do seu clássico.</p>
           <ul class="contato-lista" data-reveal>
             <li><strong>Endereço:</strong> Rua dos Clássicos, 1950 — Centro, São Paulo/SP</li>
@@ -275,7 +268,7 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <p>&copy; <span id="anoAtual"></span> GARAGEM RETRÔ — Oficina de Carros Antigos. Todos os direitos reservados.</p>
+      <p>&copy; <span id="anoAtual"></span> <strong>GARAGEM RETRÔ</strong> — Oficina de Carros Antigos. Todos os direitos reservados.</p>
       <p>CARROS DE 1950 A 1980</p>
     </div>
   </footer>

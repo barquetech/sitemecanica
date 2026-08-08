@@ -73,18 +73,6 @@
     });
   }
 
-  // Parallax sutil do carro no hero
-  var heroCar = document.getElementById('heroCar');
-
-  if (heroCar && !prefersReduced) {
-    window.addEventListener('scroll', function () {
-      var y = window.scrollY;
-      if (y < window.innerHeight) {
-        heroCar.style.transform = 'translateY(' + y * 0.12 + 'px)';
-      }
-    }, { passive: true });
-  }
-
   // Slider de depoimentos
   var depoimentos = document.querySelectorAll('.depoimento');
   var depoNav = document.getElementById('depoNav');
