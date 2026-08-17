@@ -541,6 +541,70 @@ section {
   border-top: 4px solid var(--c-vermelho);
 }
 
+/* ===== Marcas ===== */
+.marcas {
+  background: var(--c-creme);
+}
+
+.marcas-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.marca-card {
+  background: var(--c-branco);
+  border: var(--borda-gorda);
+  overflow: hidden;
+  transition: transform var(--press), box-shadow var(--press);
+}
+
+.marca-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 6px 6px 0 var(--c-preto);
+}
+
+.marca-img {
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  border-bottom: 3px solid var(--c-vermelho);
+}
+
+.marca-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.marca-card:hover .marca-img img {
+  transform: scale(1.05);
+}
+
+.marca-card figcaption {
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.marca-tipo {
+  font-family: var(--f-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--c-vermelho);
+}
+
+.marca-nome {
+  font-family: var(--f-display);
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--c-navy);
+}
+
 /* ===== Contato ===== */
 .contato {
   background: var(--c-vermelho);
@@ -777,7 +841,8 @@ section {
 /* ===== Responsivo ===== */
 @media (max-width: 960px) {
   .servicos-grid,
-  .passos-grid {
+  .passos-grid,
+  .marcas-grid {
     grid-template-columns: repeat(2, 1fr);
   }
   .contato-grid { grid-template-columns: 1fr; }
@@ -800,7 +865,8 @@ section {
     border-bottom: 1px solid var(--c-navy-claro);
   }
   .servicos-grid,
-  .passos-grid {
+  .passos-grid,
+  .marcas-grid {
     grid-template-columns: 1fr;
   }
   .hero-actions .btn { width: 100%; text-align: center; }
